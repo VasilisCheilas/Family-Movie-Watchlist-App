@@ -14,15 +14,15 @@
 
 ## Δομή του Έργου
 
-Η αρχιτεκτονική του κώδικα ακολουθεί τον παρακάτω διαχωρισμό[cite: 6]:
+Η αρχιτεκτονική του κώδικα ακολουθεί τον παρακάτω διαχωρισμό:
 
-* `data/`: Περιέχει τα τοπικά αρχεία (JSON) για την αποθήκευση των λιστών και των χρηστών[cite 6].
-* `middleware/`: Φιλοξενεί τις λειτουργίες ελέγχου πρόσβασης (π.χ. authenticate, authorize) πριν την εκτέλεση των βασικών αιτημάτων[cite: 6].
-* `routes/`: Περιλαμβάνει τη δρομολόγηση του API (auth routes, watchlist routes)[cite: 6].
-* `utils/`: Βοηθητικά εργαλεία, όπως η λειτουργία δημιουργίας των JWT[cite: 6].
-* `index.js`: Το κεντρικό αρχείο εισόδου και εκκίνησης του διακομιστή[cite: 6].
-* `package.json` & `package-lock.json`: Διαχείριση των πακέτων και των εξαρτήσεων του έργου (npm)[cite: 6].
-* `.gitignore`: Εξασφαλίζει ότι τα ευαίσθητα αρχεία (όπως το `.env`) δεν ανεβαίνουν στο αποθετήριο[cite: 6].
+* `data/`: Περιέχει τα τοπικά αρχεία (JSON) για την αποθήκευση των λιστών και των χρηστών.
+* `middleware/`: Φιλοξενεί τις λειτουργίες ελέγχου πρόσβασης (π.χ. authenticate, authorize) πριν την εκτέλεση των βασικών αιτημάτων.
+* `routes/`: Περιλαμβάνει τη δρομολόγηση του API (auth routes, watchlist routes).
+* `utils/`: Βοηθητικά εργαλεία, όπως η λειτουργία δημιουργίας των JWT.
+* `index.js`: Το κεντρικό αρχείο εισόδου και εκκίνησης του διακομιστή.
+* `package.json` & `package-lock.json`: Διαχείριση των πακέτων και των εξαρτήσεων του έργου (npm).
+* `.gitignore`: Εξασφαλίζει ότι τα ευαίσθητα αρχεία (όπως το `.env`) δεν ανεβαίνουν στο αποθετήριο.
 
 ## Εγκατάσταση και Εκτέλεση Τοπικά
 
@@ -30,9 +30,8 @@
 
 1. **Κλωνοποίηση του αποθετηρίου:**
 ```bash
-   git clone [https://github.com/VasilisCheilas/Family-Movie-Watchlist-App.git](https://github.com/VasilisCheilas/Family-Movie-Watchlist-App.git)
-   cd Family-Movie-Watchlist-App/build-a-family-movie-watchlist-api
-
+git clone [https://github.com/VasilisCheilas/Family-Movie-Watchlist-App.git](https://github.com/VasilisCheilas/Family-Movie-Watchlist-App.git)
+cd Family-Movie-Watchlist-App/build-a-family-movie-watchlist-api
 ```
 
 2. **Εγκατάσταση Εξαρτήσεων:**
@@ -53,8 +52,7 @@ JWT_SECRET=το_δικο_σας_μυστικο_κλειδι_εδω
 4. **Εκκίνηση του Server:**
 ```bash
 node index.js
-
-```
+``'
 
 
 Το API θα ξεκινήσει να λειτουργεί.
@@ -62,6 +60,5 @@ node index.js
 ## Άδεια
 
 Αυτό το έργο δημιουργήθηκε για εκπαιδευτικούς σκοπούς (portfolio) στα πλαίσια της πιστοποίησης του freeCodeCamp.
-```
 
 ```
