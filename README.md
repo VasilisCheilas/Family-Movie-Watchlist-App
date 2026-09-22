@@ -35,9 +35,8 @@ cd Family-Movie-Watchlist-App/build-a-family-movie-watchlist-api
 ```
 
 2. **Εγκατάσταση Εξαρτήσεων:**
-```bash
+``` bash
 npm install
-
 ```
 
 
@@ -50,9 +49,9 @@ JWT_SECRET=το_δικο_σας_μυστικο_κλειδι_εδω
 
 
 4. **Εκκίνηση του Server:**
-```bash
+``` bash
 node index.js
-``'
+```
 
 
 Το API θα ξεκινήσει να λειτουργεί.
