@@ -1,7 +1,7 @@
 import express from "express";
 import {findByUsername} from "../utils/db.js";
 import bcrypt from "bcryptjs";
-import {generateToken} from "../utils/jwt.js";
+import {signToken} from "../utils/jwt.js";
 const router = express.Router();
 
 
@@ -28,7 +28,7 @@ router.post("/login", async (req,res)=>{
         role: user.role,
         username: user.username
     };
-    const token = generateToken(payload);
+    const token = signToken(payload);
     return res.status(200).json({"token":token});
 
 });
