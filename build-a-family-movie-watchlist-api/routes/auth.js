@@ -14,15 +14,12 @@ router.post("/login", async (req,res)=>{
     let isPasswordCorrect = false;
     
     if (user) {
-        // Κανονική σύγκριση αν βρέθηκε ο χρήστης
+
         isPasswordCorrect = await bcrypt.compare(password, user.passwordHash);
     } else {
-        // Αν ο χρήστης ΔΕΝ βρέθηκε, προσομοιώνουμε τον χρόνο ελέγχου
-        // Κάνουμε ένα "άχρηστο" hash ώστε ο χρόνος απόκρισης να είναι πανομοιότυπος
         await bcrypt.hash(password, 10);
     }
-    
-    // Τώρα κάνουμε τον έλεγχο. Αν ελέγξουμε το `user` πρώτα, δεν θα "σκάσει" το user.id παρακάτω
+
     if (!user || !isPasswordCorrect) {
         return res.status(401).json({ "error": "Username or password incorrect" });
     }
