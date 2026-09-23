@@ -1,4 +1,4 @@
-import {verifyToken,generateToken} from "../utils/jwt.js";
+import {verifyToken,signToken} from "../utils/jwt.js";
 
 
 function authenticate(req,res,next){
