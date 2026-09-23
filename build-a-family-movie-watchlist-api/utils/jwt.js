@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const generateToken = (payload, expiresIn = '1d') => {
+const signToken = (payload, expiresIn = '1d') => {
     const secret = process.env.JWT_SECRET;
     
     if (!secret) {
@@ -18,16 +18,16 @@ const verifyToken = (token) => {
     }
 
     try {
-        // Αν το token είναι σωστό και δεν έχει λήξει, επιστρέφει το αρχικό payload
+     
         return jwt.verify(token, secret);
     } catch (error) {
-        // Πιάνουμε τα σφάλματα (όπως TokenExpiredError ή JsonWebTokenError) σιωπηλά
+     
         console.error("Αποτυχία επαλήθευσης Token:", error.message);
         return null;
     }
 };
 
-export { generateToken, verifyToken };
+export { signToken, verifyToken };
 
 
 
